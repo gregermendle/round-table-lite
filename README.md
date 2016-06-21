@@ -1,0 +1,2 @@
+# RoundTableLite
+Roundtable Lite was designed to be an easy to play RPG. It does not require a game master, although you may choose to play with one. Currently, the game is meant to be played in single sessions with each player creating a new character every time you play. This being said, the game is meant to be fun and interpretive. If you wish to play the same character then this is not to be discouraged.

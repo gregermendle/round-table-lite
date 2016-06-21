@@ -37,7 +37,7 @@ for he in range(5,21):
                 print("baddie will attack first\n")'''
             fight = True
             while fight:
-                if(human.initiative > baddie.initiative):
+                if(human.initiative >= baddie.initiative):
                     attackTurn(human, baddie)
                     if spellcasts < 3:
                         spellcasts+=1
