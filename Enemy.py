@@ -1,10 +1,12 @@
 from random import *
 
-#The Enemy class closely resemble the Player class
-#It is the template on which enemies are created
+# The Enemy class closely resemble the Player class
+# It is the template on which enemies are created
+
 
 class Enemy:
-    #Base Stats for all enemies
+
+    # Base Stats for all enemies
     name = "Goblin"
     health = 4
     maxHealth = 4
@@ -21,19 +23,19 @@ class Enemy:
         self.defense = DEF
         self.initMod = INIT
 
-    #rolls a D6 to determine damage
+    # rolls a D6 to determine damage
     def attackRoll(self):
-        diceRoll = randint(1,6)
+        diceRoll = randint(1, 6)
         atkRoll = self.attack + diceRoll
         return atkRoll
 
-    #rolls a D6 for initiative
+    # rolls a D6 for initiative
     def rollInit(self):
         roll = randint(1, 6) + self.initMod
         self.initiative = roll
         return roll
 
-    #Causes enemy to lose health on attack
+    # Causes enemy to lose health on attack
     def takeDamage(self, nmeATK):
         dmg = (nmeATK - self.defense)
         if dmg > 0:

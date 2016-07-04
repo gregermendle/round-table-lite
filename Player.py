@@ -1,10 +1,11 @@
 from random import *
+import Die
 
 
-#Player creates a template on which professions are built
+# Player creates a template on which professions are built
 
 class Player:
-    #Base stats for player
+    # Base stats for player
     health = 8
     maxHealth = 8
     attack = 0
@@ -12,9 +13,8 @@ class Player:
     initiative = 0
     initMod = 0
     alive = True
-    #Skill Checks
-    #to be added soon
-
+    # Skill Checks
+    # to be added soon
 
     def __init__(self, HP, ATK, DEF, INIT):
         self.maxHealth = HP
@@ -25,13 +25,13 @@ class Player:
 
     # rolls a D6 for damage
     def attackRoll(self):
-        diceRoll = randint(1,6)
+        diceRoll = randint(1, 6)
         atkRoll = self.attack + diceRoll
         return atkRoll
 
     # rolls a D6 for initiative
     def rollInit(self):
-        roll = randint(1,6) + self.initMod
+        roll = randint(1, 6) + self.initMod
         self.initiative = roll
         return roll
 
@@ -52,6 +52,6 @@ class Player:
         self.alive = True
         self.health = self.maxHealth
 
-    #To be overriden by professsion classes
+    # To be overriden by professsion classes
     def specialAbility(self):
-        randint(1,6)
+        randint(1, 6)
